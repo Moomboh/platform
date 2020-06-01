@@ -67,6 +67,8 @@ To get the diff between two versions, go to https://github.com/shopware/platform
     * Added possibility to delete orders without documents on `sw-order-list`
     * Added methods `isProductGroup` `setIsProductGroup` `isVariantProduct` in `\Shopware\Core\Content\Product\ProductEntity` 
     * DB level write operation (e.g. cascade deletes) are not validated against the write prtoection anymore
+    * Fixed a bug where `Shopware\Core\Checkout\Cart\Rule\LineItemTagRule` with `self::OPERATOR_NEQ` could match for a Cart with a product with the the excluded tag
+    * Added tests for `CartRuleScope` in `Shopware\Core\Checkout\Test\Cart\RuleLineItemTagRuleTest` 
  
 * Storefront
     * Added `pack_unit_plural` to `buy-widget-form.html.twig`
